@@ -61,16 +61,24 @@ const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-10"
           >
-           <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer">
+           <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+
+            >
               Home
             </li>
-            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+
+            >
               Menu
             </li>
-            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+
+            >
               About Us
             </li>
-            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer">
+            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+
+            >
               Service
             </li>
             </motion.ul>
@@ -94,9 +102,10 @@ const Header = () => {
               isMenu && (
                 <div className="w-40 bg-gray-100 shadow-xl rounded-lg flex flex-col absolute top-13 right-0">
             {user && user.email === "anthonyagapay709@gmail.com" && (
-              <Link to={"createItem"}>
-                <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100
-                transition-all duration-100 ease-in-out text-textColor text-base">
+              <Link to={"/createItem"}>
+                <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                onClick={() => setIsMenu(false)}
+                >
                 New Item <MdAdd /> 
                 </p>
               </Link>

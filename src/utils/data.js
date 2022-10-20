@@ -33,3 +33,40 @@ export const heroData = [
     }
 ]
 
+export const  categories = [
+     {
+          id: 1,
+          name: "Graphic Card",
+          urlParaName: "graphic card",
+     },
+     {
+          id: 2,
+          name: "Central Processing Unit",
+          urlParaName: "central processing unit",
+     },
+     {
+          id: 3,
+          name: "Ram",
+          urlParaName: "ram",
+     },
+     {
+          id: 4,
+          name: "Mother Board",
+          urlParaName: "mother board",
+     },
+     {
+          id: 5,
+          name: "Power Supply",
+          urlParaName: "power supply",
+     },
+     {
+          id: 6,
+          name: "Fan",
+          urlParaName: "fan",
+     },
+     {
+          id: 7,
+          name: "Air Cooler",
+          urlParaName: "air cooler",
+     },
+]

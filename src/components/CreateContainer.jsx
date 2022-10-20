@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { motion } from "framer-motion";
 
-
-
+import { MdFastfood } from "react-icons/md"
+import { categories } from "../utils/data";
+import Loader from "./Loader";
 const CreateContainer = () => {
 
   const [title, setTitle] = useState("");
@@ -10,10 +11,10 @@ const CreateContainer = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState(null);
   const [imageAsset, setImageAsset] = useState(null);
-  const [fields, setFields] = useState(true);
+  const [fields, setFields] = useState(false);
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   
 
   
@@ -31,9 +32,42 @@ const CreateContainer = () => {
                 : "bg-emerald-400 text-emerald-800"
             }`}
            >
-            Something Wrong!
+            {msg}
           </motion.p>
         )}
+
+        <div className="w-full py-2 border-b border-gray-500 flex items-center gap-2">
+            <MdFastfood className="text-xl text-slate-100" />
+            <input
+              type="text"
+              required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Title"
+              className="w-full h-full text-lg bg-transparent font-semibold outline-none border-none placeholder:text-gray-300 text-slate-100"
+              />
+        </div>
+
+        <div className="w-full">
+            <select onChange={(e) => setCategory(e.target.value)} className="outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer">
+              <option value="other" className="bg-white">
+                Select Category
+              </option> 
+               {categories && 
+                categories.map((item) => ( 
+                <option 
+                  key={item.id} 
+                  className="text-base border-0 outline-none capitalize bg-white text-headingColor" 
+                  value={item.urlParaName}
+                >
+                  {item.name}
+                </option>
+                  ))} 
+          </select>
+        </div>
+          <div className="group flex justify-center items-center flex-col border-2 border-dotted border-gray-300 w-full h-255 md:h-420 cursor-pointer rounded-lg">
+              {isLoading ? <Loader /> : <></>}
+          </div>
       </div>
     </div>
   )

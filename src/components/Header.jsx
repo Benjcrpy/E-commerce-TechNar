@@ -55,7 +55,7 @@ const Header = () => {
               </Link>
 
           <div className="flex items-center gap-8">
-          <motion.ul
+          <ul
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
@@ -81,7 +81,7 @@ const Header = () => {
             >
               Service
             </li>
-            </motion.ul>
+            </ul>
 
         <div className="relative flex items-center justify-center">
           <MdShoppingBasket className="text-white hover:text-orange-600 text-2xl ml-8 cursor-pointer"/>

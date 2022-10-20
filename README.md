@@ -24,5 +24,4 @@ to Build the project - yarn build
 
 
 **UPDATED**
-![image](https://user-images.githubusercontent.com/93909966/197037821-66b8e624-a843-48b3-983f-3ce58a3b048e.png)
-
+![image](https://user-images.githubusercontent.com/93909966/197037980-c4e35a60-c10d-417f-83cf-ebb4d012ef21.png)

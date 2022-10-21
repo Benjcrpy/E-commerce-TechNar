@@ -7,6 +7,7 @@ import { categories } from "../utils/data";
 import Loader from "./Loader";
 import { getDownloadURL, deleteObject, ref, StringFormat, uploadBytesResumable } from "firebase/storage"
 import { storage } from "../firebase.config";
+import { saveItem } from "../utils/firebaseFunctions";
 
 
 
@@ -15,7 +16,7 @@ const CreateContainer = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState(null);
   const [imageAsset, setImageAsset] = useState(null);
-  const [fields, setFields] = useState(null);
+  const [fields, setFields] = useState(false);
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -69,7 +70,54 @@ const CreateContainer = () => {
     });
   };
   
-  const saveDetail = () => {}
+  const saveDetails = () => {
+    setIsLoading(true);
+    try {
+      if (!title || !imageAsset || !price || !category) {
+        setFields(true);
+        setMsg("Required fields can't be empty");
+        setAlertStatus("danger");
+        setTimeout(() => {
+          setFields(false);
+          setIsLoading(false);
+        }, 4000);
+      }else{
+        const data = {
+          id: `${Date.now()}`,
+          title: title,
+          imageURL: imageAsset,
+          category: category,
+          qty: 1,
+          price: price
+        };
+      saveItem(data);
+      setIsLoading(false);
+      setFields(true);
+      setMsg("Data uploaded Successfully");
+      setAlertStatus("success");
+      setTimeout(() => {
+        setFields(false);
+      }, 4000);
+        clearData();
+      }
+    } catch (error) {
+      console.log(error);
+        setFields(true);
+        setMsg("Error uploading : Please try again");
+        setAlertStatus("danger");
+        setTimeout(() => {
+          setFields(false);
+          setIsLoading(false);
+        }, 3000);
+    }
+  };  
+
+  const clearData = () => {
+    setTitle("");
+    setImageAsset(null);
+    setPrice("");
+    setCategory("Select Category");
+  };
   
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
@@ -155,7 +203,7 @@ const CreateContainer = () => {
           <div className="w-full py-2 border-b border-gray-300 flex
           items-center gap-2">
             <MdMoney className="text-slate-100 text-2xl"/>
-            <input className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-slate-100" 
+            <input className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-slate-100 text-slate-100" 
             type="text"
             required
             value={price} 
@@ -166,7 +214,7 @@ const CreateContainer = () => {
 
         <div className="flex items-center w-full">
           <button type="button" className="w-full h-full items-center justify-center border-none outline-none bg-emerald-600 px-12 py-2 rounded-lg text-lg text-white font-semibold"
-          onClick={saveDetail}> Save </button>
+          onClick={saveDetails}> Save </button>
         </div>
       </div>
     </div>

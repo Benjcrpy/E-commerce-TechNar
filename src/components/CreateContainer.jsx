@@ -1,15 +1,15 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion";
 
 import { RiComputerFill } from "react-icons/ri"
 import { MdCloudUpload, MdDelete,   MdMoney } from "react-icons/md";
 import { categories } from "../utils/data";
 import Loader from "./Loader";
-import { getDownloadURL, deleteObject, ref, StringFormat, uploadBytesResumable } from "firebase/storage"
+import { getDownloadURL, deleteObject, ref, uploadBytesResumable } from "firebase/storage"
 import { storage } from "../firebase.config";
-import { saveItem } from "../utils/firebaseFunctions";
-
-
+import { getAllComputerItems, saveItem } from "../utils/firebaseFunctions";
+import { useStateValue } from "../context/StateProvide";
+import { actionType } from '../context/reducer';
 
 const CreateContainer = () => {
   const [title, setTitle] = useState("");
@@ -20,6 +20,7 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [{ computerItems }, dispatch] = useStateValue();
   
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -97,6 +98,7 @@ const CreateContainer = () => {
       setAlertStatus("success");
       setTimeout(() => {
         setFields(false);
+        clearData();
       }, 4000);
         clearData();
       }
@@ -110,6 +112,8 @@ const CreateContainer = () => {
           setIsLoading(false);
         }, 3000);
     }
+
+    fetchData()
   };  
 
   const clearData = () => {
@@ -119,6 +123,19 @@ const CreateContainer = () => {
     setCategory("Select Category");
   };
   
+  const fetchData = async () => {
+    await getAllComputerItems().then(data => {
+      dispatch({
+        type: actionType.SET_COMPUTER_ITEMS,
+        computerItems: data,
+      });
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="w-[90%] md:w-[50%] border border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center gap-4">

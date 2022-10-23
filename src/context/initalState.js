@@ -4,4 +4,5 @@ const userInfo = fetchUser()
 
 export const initalState ={
 user: userInfo,
+computerItems: null
 };

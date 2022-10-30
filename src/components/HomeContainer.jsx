@@ -2,6 +2,7 @@ import React from 'react'
 import Delivery from '../images/del.png'
 import Bg from '../images/heroBg.png'
 import { heroData } from '../utils/data'
+import MainContainer from './MainContainer'
 
 
 const HomeContainer = () => {

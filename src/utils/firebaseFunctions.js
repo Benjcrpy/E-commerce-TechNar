@@ -9,10 +9,10 @@ export const saveItem = async (data) => {
   });
 };
 
-// getall the computer items
+// get all the computer items
 export const getAllComputerItems = async () => {
   const items = await getDocs(
     query(collection(firestore, "computerItems"), orderBy("id", "desc"))
   );
-    return items.doc.map((doc) => doc.data());
+  return items.docs.map((doc) => doc.data());
 };

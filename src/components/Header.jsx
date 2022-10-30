@@ -66,11 +66,11 @@ const Header = () => {
             >
               Home
             </Link>
-            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+            <Link to={"/Menu"}className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
 
             >
               Menu
-            </li>
+            </Link>
             <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
 
             >

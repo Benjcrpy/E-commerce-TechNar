@@ -33,8 +33,8 @@ const CarItem = ({item, setFlag, flag }) => {
           });
           cartDispatch();
       }else{
-        if(qty === 1 ){
-          items = cartItems.filter((items) => item.id !== id);
+        if (qty == 1) {
+          items = cartItems.filter((item) => item.id !== id);
           setFlag(flag + 1);
           cartDispatch();
         }else{
@@ -42,6 +42,7 @@ const CarItem = ({item, setFlag, flag }) => {
           cartItems.map((item) => {
             if (item.id === id) {
               item.qty -= 1;
+              setFlag(flag + 1);
               }
             });
             cartDispatch();
@@ -65,6 +66,7 @@ const CarItem = ({item, setFlag, flag }) => {
           <p className="text-sm font-bold text-gray-50"> {item?.title} </p>
           <p className="text=sm block text-gray-300 font-semibold"><span className="text-sm text-red-600"> ₱ </span> {parseFloat(item?.price) * qty} </p>
          </div>
+
         {/* button section */}
          <div className="group flex items-center gap-2 ml-auto cursor-pointer">
              <motion.div whileTap={{ scale: 0.75 }} onClick={() => updateQty("remove", item?.id)}>
@@ -75,7 +77,9 @@ const CarItem = ({item, setFlag, flag }) => {
               {qty}
              </p>
  
-             <motion.div whileTap={{ scale: 0.75 }} onClick={() => updateQty("add", item?.id)}>
+             <motion.div whileTap={{ scale: 0.75 }} 
+             onClick={() => updateQty("add", item?.id)}
+             >
                  <BiPlus className="text-gray-50" />
              </motion.div>
          </div> 

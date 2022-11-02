@@ -29,7 +29,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
 
   useEffect(() => {
     addtocart()
-  },[items])
+  }, [items]);
 
 
   return (
@@ -44,8 +44,9 @@ const RowContainer = ({ flag, data, scrollValue }) => {
 
 
       {data && data.length > 0 ? (
-       data.map(item => (
-        <div key={item?.id} className="w-275 h-[200px] min-w-[275px] md:w-300 md:min-w-[300px]  bg-slate-600 hover:bg-slate-800 rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative">
+       data.map((item) => (
+        <div key={item?.id} 
+        className="w-275 h-[200px] min-w-[275px] md:w-300 md:min-w-[300px]  bg-slate-600 hover:bg-slate-800 rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative">
        
        <div className="w-full flex items-center justify-between">
         <motion.div
@@ -66,6 +67,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                 <MdShoppingBasket className="text-white" />
           </motion.div>
         </div>
+        
         <div className="w-full flex flex-col gap-1 items-end justify-end">
             <p className="text-slate-100 font-semibold text-lg">
                 {item?.title}

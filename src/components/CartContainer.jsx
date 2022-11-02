@@ -7,8 +7,9 @@ import { useStateValue } from '../context/StateProvide';
 import { actionType } from "../context/reducer";
 import EmptyCart from "../images/emptyCart.png"
 import CartItem from './CartItem';
-const CartContainer = () => {
 
+
+const CartContainer = () => {
     const [{ cartShow, cartItems, user}, dispatch] = useStateValue();
     const [flag, setFlag] = useState(1);
     const [tot, setTot] = useState(0);
@@ -18,7 +19,7 @@ const CartContainer = () => {
           type: actionType.SET_CART_SHOW,
           cartShow: !cartShow,
        });
-      }
+      };
 
       useEffect(() => {
         let totalPrice = cartItems.reduce(function(accumulator, item) {
@@ -67,8 +68,13 @@ const CartContainer = () => {
         <div className="w-full h-340 md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll scrollbar-none">
 
        {/* cart Item */}
-       {cartItems && cartItems.map(item => (
-         <CartItem key={item.id} item={item} />
+       {cartItems && 
+        cartItems.map(item => (
+         <CartItem 
+         key={item.id} 
+         item={item} 
+         flag={flag}
+         />
        ))}
       </div>
 

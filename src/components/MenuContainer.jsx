@@ -4,10 +4,12 @@ import { categories } from '../utils/data'
 import { motion } from 'framer-motion'
 import RowContainer from './RowContainer'
 import { useStateValue } from '../context/StateProvide';
+import CartContainer from './CartContainer';
 const MenuContainer = () => {
   const [filter, setFilter] = useState("graphic card");
+  
 
-  const [{ computerItems }, dispatch] = useStateValue();
+  const [{ computerItems, cartShow }, dispatch] = useStateValue();
 
 
   useEffect(() => {}, [filter])
@@ -53,6 +55,7 @@ const MenuContainer = () => {
             data={computerItems?.filter((n) => n.category === filter)} />
       </div>
     </div>
+    {cartShow && <CartContainer />}
    </section>
     
   )

@@ -37,36 +37,31 @@ export const  categories = [
      {
           id: 1,
           name: "Graphic Card",
-          urlParaName: "graphic card",
+          urlParamName: "graphic card",
      },
      {
           id: 2,
-          name: "Central Processing Unit",
-          urlParaName: "central processing unit",
+          name: "Ram",
+          urlParamName: "ram",
      },
      {
           id: 3,
-          name: "Ram",
-          urlParaName: "ram",
+          name: "Mother Board",
+          urlParamName: "mother board",
      },
      {
           id: 4,
-          name: "Mother Board",
-          urlParaName: "mother board",
-     },
-     {
-          id: 5,
           name: "Power Supply",
           urlParaName: "power supply",
      },
      {
-          id: 6,
+          id: 5,
           name: "Fan",
-          urlParaName: "fan",
+          urlParamName: "fan",
      },
      {
-          id: 7,
+          id: 6,
           name: "Air Cooler",
-          urlParaName: "air cooler",
+          urlParamName: "air cooler",
      },
 ]

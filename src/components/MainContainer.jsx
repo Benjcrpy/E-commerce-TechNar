@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import MenuContainer from './MenuContainer';
 import CartContainer from './CartContainer';
+import Footer from './Footer';
 const MainContainer = () => {
   const [{computerItems, cartShow}, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
@@ -54,6 +55,8 @@ useEffect(() => {}, [scrollValue, cartShow])
       <MenuContainer />
 
       {cartShow && <CartContainer />}
+
+      <Footer />
 
     </div>
   )

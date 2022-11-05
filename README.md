@@ -1,27 +1,30 @@
-School project 
-# WEB DEVELOPMENT #
+In the project directory, you can run:
 
+yarn start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
-To download yarn - yarn install
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
-Run the project- yarn start
+yarn test
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-to Build the project - yarn build
+yarn build
+Builds the app for production to the build folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
 
+See the section about deployment for more information.
 
+yarn eject
+Note: this is a one-way operation. Once you eject, you can't go back!
 
+If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-
-
-
-
-
-
-
-![image](https://user-images.githubusercontent.com/93909966/196350321-ca6b68fd-4524-46c5-8200-45fb69d13de3.png)
-
-
-**UPDATED**
-![image](https://user-images.githubusercontent.com/93909966/197037980-c4e35a60-c10d-417f-83cf-ebb4d012ef21.png)
+You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.

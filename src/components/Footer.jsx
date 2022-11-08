@@ -23,9 +23,10 @@ const Footer = () => {
           </div>
         </div>
         <ItemsContainer />
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8">
-          <span>© 2022 Tech Nar. All Right Reversed</span>
-          <span>Terms . Privacy Policy</span>
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-5 text-center pt-2 text-gray-400 text-sm pb-8">
+          <a href="/Terms" target="_blank" rel="norefferer" className="text-slate-500 font-semibold hover:underline hover:text-slate-300"> Terms of Use </a>
+          <a href="/Privacy" target="_blank" rel="norefferer" className="text-slate-500 font-semibold hover:underline hover:text-slate-300"> Privacy Policy </a>
+          <span className="text-slate-50 font-semibold underline-500 ">© 2022 Tech Nar. All Right Reversed</span>
           <SocialIcons Icons={Icons} />
         </div>
     </section>

@@ -11,3 +11,5 @@ export {default as Footer} from './Footer';
 export {default as ItemsContainer} from './ItemsContainer';
 export {default as Item} from './Item';
 export {default as SocialIcons} from './SocialIcons'
+export {default as Privacy} from './Privacy'
+export {default as Terms} from './Terms'

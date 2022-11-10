@@ -2,7 +2,6 @@ import React from 'react'
 import Delivery from '../images/del.png'
 import Bg from '../images/heroBg.png'
 import { heroData } from '../utils/data'
-import MainContainer from './MainContainer'
 
 
 const HomeContainer = () => {
@@ -24,15 +23,14 @@ const HomeContainer = () => {
         </div>
 
       <p className="text-[3.0rem] lg:text-[4.5rem] font-bold tracking-wide text-slate-200">
-         A Shop You <span className="underline after:inline-block text-orange-500 text-[3rem] lg:text-[5rem]"> Can </span> <span className="underline after:inline-block text-red-500  text-[3rem] lg:text-[5rem]"> Talk </span>
+         A Shop You <span className="underline after:inline-block text-orange-500 text-[3rem] lg:text-[5rem]"> Can 
+         </span> <span className="underline after:inline-block text-red-500  text-[3rem] lg:text-[5rem]"> Talk. </span>
       </p>
 
       <p className="text-base text-slate-100 text-center md:text-left">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Enter the universe of technology with our online shopping platform with prices that can make you look. Tune in as we show offers that
+      can be comparable to bigshot platforms like shopee and lazada. In addition to this Technar is a platform that you can talk regarding technological problems for free!
+      Special prizes and Perks   will be given to our users who uses and orders from the account multiple times. So what are you waiting for? Click the b
     </p>
 
       <button type="button" className="bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-4 py-2  
@@ -75,6 +73,8 @@ const HomeContainer = () => {
            
         </div>
     </div>
+    
+   
   </section>
   )
 }

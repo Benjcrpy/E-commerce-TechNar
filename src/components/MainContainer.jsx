@@ -24,8 +24,8 @@ useEffect(() => {}, [scrollValue, cartShow])
         <div className="w-full flex items-center justify-between">
             <p className="text-2xl font-semibold capitalize text-slate-100 relative
             before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2
-            before:left-5 before:bg-gradient-to-tr from-cyan-500 to-cyan-900 transition-all ease-in-out duration-100">
-              Our CPU & PSU
+            before:left-0 before:bg-gradient-to-tr from-cyan-500 to-cyan-900 transition-all ease-in-out duration-100">
+              CPU & PSU
             </p>
 
           <div className="hidden md:flex gap-3 items-center">

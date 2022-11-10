@@ -29,7 +29,12 @@ const Footer = () => {
           <span className="text-slate-50 font-semibold underline-500 ">© 2022 Tech Nar. All Right Reversed</span>
           <SocialIcons Icons={Icons} />
         </div>
+
+
+        
     </section>
+
+    
   )
 }
 

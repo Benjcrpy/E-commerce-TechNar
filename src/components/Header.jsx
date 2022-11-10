@@ -78,11 +78,11 @@ const Header = () => {
             >
               Menu
             </Link>
-            <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
+            <Link to={"/About"}className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
 
             >
               About Us
-            </li>
+            </Link>
             <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
 
             >

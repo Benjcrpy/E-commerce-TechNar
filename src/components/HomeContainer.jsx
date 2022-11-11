@@ -27,7 +27,7 @@ const HomeContainer = () => {
          </span> <span className="underline after:inline-block text-red-500  text-[3rem] lg:text-[5rem]"> Talk. </span>
       </p>
 
-      <p className="text-base text-slate-100 text-center md:text-left">
+      <p className="text-2xl text-slate-100 text-center md:text-left">
       Enter the universe of technology with our online shopping platform with prices that can make you look. Tune in as we show offers that
       can be comparable to bigshot platforms like shopee and lazada. In addition to this Technar is a platform that you can talk regarding technological problems for free!
       Special prizes and Perks   will be given to our users who uses and orders from the account multiple times. So what are you waiting for? Click the b

@@ -10,6 +10,7 @@ import { useState } from 'react';
 import MenuContainer from './MenuContainer';
 import CartContainer from './CartContainer';
 import Footer from './Footer';
+import About from './About'
 const MainContainer = () => {
   const [{computerItems, cartShow}, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
@@ -22,7 +23,7 @@ useEffect(() => {}, [scrollValue, cartShow])
 
       <section className="w-full my-6">
         <div className="w-full flex items-center justify-between">
-            <p className="text-2xl font-semibold capitalize text-slate-100 relative
+            <p className="text-3xl font-semibold capitalize text-slate-100 relative
             before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2
             before:left-0 before:bg-gradient-to-tr from-cyan-500 to-cyan-900 transition-all ease-in-out duration-100">
               CPU & PSU
@@ -44,6 +45,7 @@ useEffect(() => {}, [scrollValue, cartShow])
               </motion.div>
           </div>  
         </div>
+
         <RowContainer 
         scrollValue={scrollValue} 
         flag={true} 
@@ -55,6 +57,8 @@ useEffect(() => {}, [scrollValue, cartShow])
       <MenuContainer />
 
       {cartShow && <CartContainer />}
+
+      <About />
 
       <Footer />
 

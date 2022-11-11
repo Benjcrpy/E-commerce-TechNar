@@ -78,11 +78,6 @@ const Header = () => {
             >
               Menu
             </Link>
-            <Link to={"/About"}className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
-
-            >
-              About Us
-            </Link>
             <li className="text-lg text-white hover:text-orange-600 duration-100 transition-all ease-in-out cursor-pointer"
 
             >

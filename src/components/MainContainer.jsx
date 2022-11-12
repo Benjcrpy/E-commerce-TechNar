@@ -11,6 +11,7 @@ import MenuContainer from './MenuContainer';
 import CartContainer from './CartContainer';
 import Footer from './Footer';
 import About from './About'
+import Support from './Support'
 const MainContainer = () => {
   const [{computerItems, cartShow}, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
@@ -59,6 +60,8 @@ useEffect(() => {}, [scrollValue, cartShow])
       {cartShow && <CartContainer />}
 
       <About />
+
+      <Support />
 
       <Footer />
 

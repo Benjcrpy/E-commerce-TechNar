@@ -98,7 +98,7 @@ const Header = () => {
             <motion.img
              whileTap={{ scale: 0.6 }}
              src={user ? user.photoURL : Avatar} 
-             className="w-40 min-w-[50px] h-10 mig-h-[40px] cursor-pointer rounded-lg"
+             className="w-30 min-w-[10px] h-10 mig-h-[40px] cursor-pointer rounded-full"
              alt="userprofile"
              onClick={login}
             />
@@ -150,7 +150,7 @@ const Header = () => {
             <motion.img
              whileTap={{ scale: 0.6 }}
              src={user ? user.photoURL : Avatar1} 
-             className="w-30 min-w-[10px] h-10 mig-h-[40px] bg-white   cursor-pointer rounded-full"
+             className="w-30 min-w-[10px] h-10 mig-h-[40px   cursor-pointer rounded-full"
              alt="userprofile"
              onClick={login}
             />

@@ -10,7 +10,7 @@ import CartItem from './CartItem';
 
 
 const CartContainer = () => {
-    const [{ cartShow, cartItems, user}, dispatch] = useStateValue();
+    const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
     const [flag, setFlag] = useState(1);
     const [tot, setTot] = useState(0);
 
@@ -22,7 +22,7 @@ const CartContainer = () => {
       };
 
       useEffect(() => {
-        let totalPrice = cartItems.reduce(function(accumulator, item) {
+        let totalPrice = cartItems.reduce(function (accumulator, item) {
             return accumulator + item.qty * item.price;
         }, 0);
         setTot(totalPrice);
@@ -36,7 +36,7 @@ const CartContainer = () => {
         });
     
         localStorage.setItem("cartItems", JSON.stringify([]));
-      }
+      };
 
 
   return (
@@ -45,15 +45,18 @@ const CartContainer = () => {
         animate={{opacity: 1, x : 0}}
         exit={{opacity: 0, x : 200}}
         className="fixed top-0 right-0 w-full md:w-375 h-screen bg-slate-900 drop-shadow-md flex flex-col z-[101] rounded-lg">
+
         <div className="w-full flex items-center justify-between p-4 cursor-pointer">
         <motion.div whileTap={{ scale: 0.75 }} onClick={showCart}>
           <MdOutlineKeyboardBackspace className="text-slate-50 text-3xl" />
         </motion.div>
         <p className="text-slate-100 text-lg font-semibold"> Cart </p>
+
           <motion.p 
           whileTap={{ scale: 0.75 }} 
           className="flex items-center gap-2 p-1 px-2 my-2 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md
           hover:shadow-md cursor-pointer text-slate-900 text-base"
+          onClick={clearCart}
 
           >
           Clear <RiRefreshFill /> {" "} 
@@ -69,11 +72,13 @@ const CartContainer = () => {
 
        {/* cart Item */}
        {cartItems && 
-        cartItems.map(item => (
+          cartItems.length > 0 && 
+          cartItems.map((item) => (
          <CartItem 
-         key={item.id} 
-         item={item} 
-         flag={flag}
+          key={item.id} 
+          item={item}
+          setFlag={setFlag}
+          flag={flag}
          />
        ))}
       </div>

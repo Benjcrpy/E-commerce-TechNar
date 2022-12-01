@@ -102,7 +102,7 @@ const CartContainer = () => {
         </div>
           
         {user ? (
-            <motion.div 
+            <motion.button 
             whileTap={{ scale: 0.8 }}
             type="button"
             className="w-full p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 

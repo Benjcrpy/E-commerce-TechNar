@@ -11,13 +11,14 @@ const about = () => {
 
           <div className="text-center">
             <h2 className="text-5xl font-bold ">Trusted by the customer across the world</h2>
-            <p className="text-xl py-5 text-gray-50"> Technar is a Buy and Sell Shop website wherein hundereds of users worldwide use the website inorder to buy technology products to start their own PC.
-            More than 100,000 transaction have been made since the start of the website and there is a 100% completion rate ever since! Technar started as a school project in
-            manila Philippines which end up as the most used platform globally. </p>
+            <p className="text-xl py-5 text-gray-50"> Technar is a Buy and Sell Shop website where in hundred's of users worldwide use the 
+            website in order to buy technological products who wants to start their own personal computer or laptops. More than 10,000 
+            transaction have been made since the starting of the website and there is a 100% completion rate ever since! 
+            Technar started as a school project in Manila, Philippines which end up as the most used platform in the Philippines 
+            in terms of technology. TechNar has a good quality and lowest price among other sites. </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 px-2 text-center">
-
             <div className="border py-8 rounded-xl shadow-xl">
               <p className="text-6xl font-bold text-orange-400">100%</p>
               <p className="text-gray-400 mt-2">Completion</p>
@@ -32,14 +33,9 @@ const about = () => {
               <p className="text-6xl font-bold text-orange-400">100k</p>  
               <p className="text-gray-400 mt-2">Transaction</p>
             </div>
-
           </div>
         </div> 
-
-        
     </section>
-    
   )
 }
-
 export default about

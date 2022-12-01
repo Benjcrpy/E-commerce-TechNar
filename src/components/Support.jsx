@@ -13,13 +13,14 @@ const Support = () => {
             <img className="w-[500px] mx-auto my-4" src={support} alt="/"/>
         <div className="flex flex-col justify-center">
             <h1 className="text-green-400 font-bold font-family text-3xl mb-5"> SUPPORT MANAGEMENT </h1>
-            <p className="mb-10 text-lg">Technar is the only buy and sell website wherein people can use the customer service function to assist them with their problems technically.
-               To use our service function kindly click the chatbox function to start our very own Customer service assistant.</p>
+            <p className="mb-10 text-lg md:text-justify">TechNar is the only buy and sell website wherein people can use the customer service function 
+            to assist them about their concern or problems technologically. To use our service function kindly click the chatbox function 
+            in the right corner of this page to start our very own Customer service assistant it's connected to the admin and to have a 
+            fastest transactions.</p>
         </div>
         </div>
         </div>
     </section>
   )
 }
-
 export default Support

@@ -24,13 +24,15 @@ const HomeContainer = () => {
 
       <p className="text-[3.0rem] lg:text-[4.5rem] font-bold tracking-wide text-slate-200">
          A Shop You <span className="underline after:inline-block text-orange-500 text-[3rem] lg:text-[5rem]"> Can 
-         </span> <span className="underline after:inline-block text-red-500  text-[3rem] lg:text-[5rem]"> Talk. </span>
+         </span> <span className="underline after:inline-block text-red-500  text-[3rem] lg:text-[5rem]"> Talk! </span>
       </p>
 
-      <p className="text-2xl text-slate-100 text-center md:text-left">
-      Enter the universe of technology with our online shopping platform with prices that can make you look. Tune in as we show offers that
-      can be comparable to bigshot platforms like shopee and lazada. In addition to this Technar is a platform that you can talk regarding technological problems for free!
-      Special prizes and Perks   will be given to our users who uses and orders from the account multiple times. So what are you waiting for? Click the b
+      <p className="text-2xl text-slate-100 text-center md:text-left md:text-justify">
+      Welcome to the universe of technology. The online Shopping store that only offer the lowest and quality Technology Items. 
+      This site is like a bigshot Online Shopping and comparable to the other biggest online shop in the philippines. 
+      In addition  TechNar is a platform that you can talk regarding to what are you looking for, we can give recommendation and tips for free. 
+      Also we can give big discount to the loyal costumers and we have a monthly sale for everyone! 
+      What are you waiting for? Scroll, add to cart and check out!
     </p>
     
       <button type="button" Link="/Menu" className="bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-4 py-2  

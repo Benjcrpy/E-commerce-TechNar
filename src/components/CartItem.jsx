@@ -57,14 +57,16 @@ const CarItem = ({item, setFlag, flag }) => {
 
   return (
     <div  className="w-full p-1 px-2 rounded-lg bg-cartItem flex items-center gap-2 drop-shadow-lg">
-         <img src={item?.imageURL}
+         <img 
+          src={item?.imageURL}
           alt="" 
           className="w-20 h-20 max-w-[60px] rounded-full object-contain" />
  
         {/* name Items */}  
          <div className="flex flex-col gap-2">
           <p className="text-sm font-bold text-gray-50"> {item?.title} </p>
-          <p className="text=sm block text-gray-300 font-semibold"><span className="text-sm text-red-600"> ₱ </span> {parseFloat(item?.price) * qty} </p>
+          <p className="text=sm block text-gray-300 font-semibold"><span className="text-sm text-red-600"> ₱ </span> 
+          {parseFloat(item?.price) * qty} </p>
          </div>
 
         {/* button section */}

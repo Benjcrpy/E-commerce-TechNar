@@ -105,18 +105,20 @@ const CartContainer = () => {
             <motion.div 
             whileTap={{ scale: 0.8 }}
             type="button"
-            className="w-full p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex text-center justify-center text-black text-1xl text-lg my-2 hover:shadow-lg transition-all duration-150 ease-out cursor-pointer"
+            className="w-full p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 
+            flex text-center justify-center text-black text-1xl text-lg my-2 hover:shadow-lg transition-all duration-150 ease-out cursor-pointer"
             >
                 Check Out     
-            </motion.div>
+            </motion.button>
         ) : (
-            <motion.div 
+            <motion.button
             whileTap={{ scale: 0.8 }}
             type="button"
-            className="w-full p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex text-center justify-center text-black text-1xl text-lg my-2 hover:shadow-lg transition-all duration-150 ease-out cursor-pointer"
+            className="w-full p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 
+            flex text-center justify-center text-black text-1xl text-lg my-2 hover:shadow-lg transition-all duration-150 ease-out cursor-pointer"
             >
                 Log in to Check Out    
-            </motion.div>
+            </motion.button>
         )}   
        </div>
         </div>
